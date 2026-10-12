@@ -1,7 +1,6 @@
 ---
 // About page. Address: /about/
 // Tells visitors (and Google) who runs the site and how picks are made. This builds trust.
-// TODO: rewrite the first section in your own words.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { CONTACT_EMAIL, OWNER_NAME, SITE_NAME } from '../lib/site';
 ---
@@ -12,14 +11,14 @@ import { CONTACT_EMAIL, OWNER_NAME, SITE_NAME } from '../lib/site';
 >
   <article class="guide">
     <h1>About {SITE_NAME}</h1>
-    <p class="lead">Honest help choosing gadgets, made by a student for students.</p>
+    <p class="lead">Honest help choosing gadgets, made by students, for students.</p>
 
     <h2>Who we are</h2>
     <p>
-      Hi, I'm <strong>{OWNER_NAME}</strong>, a Computer Science student. I built {SITE_NAME} because
-      shopping for a laptop meant dozens of open tabs, confusing spec sheets and reviews that only
-      praised expensive models. I wanted a tool that asks what you actually need and shows the best
-      fits, with honest reasons.
+      We're the <strong>{OWNER_NAME}</strong>, and we started this as a Computer Science student project.
+      We built {SITE_NAME} because shopping for a laptop meant dozens of open tabs, confusing spec sheets
+      and reviews that only praised expensive models. We wanted a tool that asks what you actually need
+      and shows the best fits, with honest reasons.
     </p>
 
     <h2>How picks are ranked</h2>
