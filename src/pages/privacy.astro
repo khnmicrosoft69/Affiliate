@@ -1,14 +1,19 @@
 ---
 // Privacy policy. Address: /privacy/
-// Google Analytics' terms require you to have one. Keep it honest and update it
-// whenever you add a new tool that collects data.
+// Keep it honest and update it whenever you add a new tool that collects data.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { CONTACT_EMAIL, SITE_NAME } from '../lib/site';
+
+// Google Analytics is only mentioned when it's actually switched on
+// (when the PUBLIC_GA_ID setting has a value, the same check BaseLayout uses).
+const usesAnalytics = Boolean(import.meta.env.PUBLIC_GA_ID);
 ---
 
 <BaseLayout
   title={`Privacy Policy | ${SITE_NAME}`}
-  description={`How ${SITE_NAME} uses analytics and affiliate links, and what information is and isn't collected.`}
+  description={usesAnalytics
+    ? `How ${SITE_NAME} uses analytics and affiliate links, and what information is and isn't collected.`
+    : `How ${SITE_NAME} handles your information: no accounts, no tracking, and how affiliate links work.`}
 >
   <article class="guide">
     <h1>Privacy policy</h1>
@@ -19,12 +24,20 @@ import { CONTACT_EMAIL, SITE_NAME } from '../lib/site';
       <li>
         <strong>No accounts, no names, no emails.</strong> You can use the whole site without signing up.
       </li>
-      <li>
-        <strong>Anonymous usage statistics</strong> through Google Analytics: which pages are visited, the
-        approximate country and city a visit comes from, device type, and finder actions (for example
-        "chose Laptops", "changed country", "requested a new country"). We use this to decide which
-        products and countries to add next.
-      </li>
+      {
+        usesAnalytics ? (
+          <li>
+            <strong>Anonymous usage statistics</strong> through Google Analytics: which pages are visited, the
+            approximate country and city a visit comes from, device type, and finder actions (for example
+            "chose Laptops" or "requested a new country"). We use this to decide which products and countries
+            to add next.
+          </li>
+        ) : (
+          <li>
+            <strong>No analytics or tracking.</strong> We don't use any tool that tracks your visits.
+          </li>
+        )
+      }
       <li>
         <strong>Your chosen country</strong> is remembered in your own browser (local storage) so you don't
         have to pick it again. It never leaves your device.
@@ -32,11 +45,17 @@ import { CONTACT_EMAIL, SITE_NAME } from '../lib/site';
     </ul>
 
     <h2>Cookies</h2>
-    <p>
-      Google Analytics uses cookies to count visits. You can block or delete cookies in your browser
-      settings, or install Google's
-      <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Analytics opt-out add-on</a>.
-    </p>
+    {
+      usesAnalytics ? (
+        <p>
+          Google Analytics uses cookies to count visits. You can block or delete cookies in your browser
+          settings, or install Google's{' '}
+          <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Analytics opt-out add-on</a>.
+        </p>
+      ) : (
+        <p>This site doesn't set any cookies of its own.</p>
+      )
+    }
 
     <h2>Affiliate links</h2>
     <p>

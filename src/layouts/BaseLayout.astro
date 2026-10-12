@@ -1,6 +1,7 @@
 ---
 // The shared "frame" for every page: <head> with SEO tags, header, footer.
 // Each page passes in its own title and description.
+// The <slot /> tag below means "put the page's own content here".
 import '@fontsource-variable/fraunces/wght.css'; // heading font, served from our own site
 import '../styles/global.css';
 import { SITE_NAME } from '../lib/site';
@@ -66,7 +67,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 
     <main class={wide ? undefined : 'container'}>
       <slot />
-      <!-- <slot /> = "put the page's own content here" -->
     </main>
 
     <footer class="site-footer">
