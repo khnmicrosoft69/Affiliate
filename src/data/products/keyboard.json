@@ -1,0 +1,106 @@
+[
+  {
+    "id": "ph-royal-kludge-rk84",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Royal Kludge RK84",
+    "price": 2899,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A popular budget mechanical keyboard with 3 connection modes and swappable switches.",
+    "pros": [
+      "Wired, Bluetooth and 2.4GHz",
+      "Hot-swappable switches"
+    ],
+    "cons": [
+      "ABS keycaps get shiny over time"
+    ],
+    "specs": {
+      "brand": "Royal Kludge",
+      "color": [
+        "Black",
+        "White"
+      ],
+      "formFactor": "75%",
+      "switchType": "Mechanical (tactile)",
+      "hotSwappable": true,
+      "connection": [
+        "Wired",
+        "Bluetooth",
+        "2.4GHz wireless"
+      ],
+      "backlight": "RGB",
+      "keycaps": "ABS"
+    }
+  },
+  {
+    "id": "ph-logitech-k380",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Logitech K380",
+    "price": 1795,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A quiet, slim Bluetooth keyboard that switches between laptop, tablet and phone.",
+    "pros": [
+      "Quiet and portable",
+      "Switch between 3 devices"
+    ],
+    "cons": [
+      "No backlight",
+      "Not mechanical"
+    ],
+    "specs": {
+      "brand": "Logitech",
+      "color": [
+        "Graphite",
+        "Rose",
+        "Off-white"
+      ],
+      "formFactor": "TKL",
+      "switchType": "Low-profile",
+      "hotSwappable": false,
+      "connection": [
+        "Bluetooth"
+      ],
+      "backlight": "None",
+      "keycaps": "ABS"
+    }
+  },
+  {
+    "id": "ph-aula-f75",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – AULA F75",
+    "price": 2499,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Smooth, premium-feeling typing for the price, with durable PBT keycaps.",
+    "pros": [
+      "PBT keycaps",
+      "Wired, Bluetooth and 2.4GHz"
+    ],
+    "cons": [
+      "Heavier than most keyboards",
+      "Linear switches can feel too light for some"
+    ],
+    "specs": {
+      "brand": "AULA",
+      "color": [
+        "Black",
+        "White",
+        "Blue"
+      ],
+      "formFactor": "75%",
+      "switchType": "Mechanical (linear)",
+      "hotSwappable": true,
+      "connection": [
+        "Wired",
+        "Bluetooth",
+        "2.4GHz wireless"
+      ],
+      "backlight": "RGB",
+      "keycaps": "PBT"
+    }
+  }
+]

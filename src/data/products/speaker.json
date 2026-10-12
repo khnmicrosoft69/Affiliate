@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ph-jbl-go-4",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – JBL Go 4",
+    "price": 2999,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A tiny, waterproof speaker for the bag or the beach.",
+    "pros": [
+      "Very small",
+      "Waterproof (IP67)"
+    ],
+    "cons": [
+      "Not very loud",
+      "Short 7-hour battery"
+    ],
+    "specs": {
+      "brand": "JBL",
+      "color": [
+        "Black",
+        "Blue",
+        "Red",
+        "Pink"
+      ],
+      "formFactor": "Pocket",
+      "outputW": 4.2,
+      "batteryHours": 7,
+      "waterResistance": "IP67",
+      "weightG": 190,
+      "stereoPair": true,
+      "mic": false
+    }
+  },
+  {
+    "id": "ph-jbl-flip-6",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – JBL Flip 6",
+    "price": 6999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Loud, clear and waterproof: a great all-round speaker for dorms and trips.",
+    "pros": [
+      "Loud 30W sound",
+      "Waterproof (IP67)"
+    ],
+    "cons": [
+      "No speakerphone mic",
+      "Pricier than rivals"
+    ],
+    "specs": {
+      "brand": "JBL",
+      "color": [
+        "Black",
+        "Blue",
+        "Red",
+        "Grey"
+      ],
+      "formFactor": "Portable",
+      "outputW": 30,
+      "batteryHours": 12,
+      "waterResistance": "IP67",
+      "weightG": 550,
+      "stereoPair": true,
+      "mic": false
+    }
+  },
+  {
+    "id": "ph-soundcore-2",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – soundcore 2 Bluetooth Speaker",
+    "price": 1999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Excellent battery life and decent sound for the price.",
+    "pros": [
+      "About 24-hour battery",
+      "Speakerphone mic"
+    ],
+    "cons": [
+      "Less bass than JBL"
+    ],
+    "specs": {
+      "brand": "Anker",
+      "color": [
+        "Black",
+        "Blue",
+        "Red"
+      ],
+      "formFactor": "Portable",
+      "outputW": 12,
+      "batteryHours": 24,
+      "waterResistance": "IPX7",
+      "weightG": 414,
+      "stereoPair": true,
+      "mic": true
+    }
+  }
+]

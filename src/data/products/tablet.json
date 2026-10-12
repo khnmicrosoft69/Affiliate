@@ -1,0 +1,124 @@
+[
+  {
+    "id": "ph-redmi-pad-2",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Xiaomi Redmi Pad 2",
+    "price": 11999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A budget tablet with a big battery and smooth 90Hz screen, good for reading, videos and notes.",
+    "pros": [
+      "9000mAh battery",
+      "Stylus and keyboard support"
+    ],
+    "cons": [
+      "Only 6GB RAM",
+      "Slower chip for heavy games"
+    ],
+    "specs": {
+      "brand": "Xiaomi",
+      "color": [
+        "Graphite Gray",
+        "Mint Green"
+      ],
+      "chipset": "MediaTek Helio G100-Ultra",
+      "ramGB": 6,
+      "storageGB": 128,
+      "screenInches": 11,
+      "refreshHz": 90,
+      "batteryMah": 9000,
+      "weightG": 510,
+      "os": "Android",
+      "stylusSupport": true,
+      "keyboardSupport": true,
+      "cellular": false
+    }
+  },
+  {
+    "id": "ph-ipad-11",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Apple iPad (11th gen)",
+    "price": 25990,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/ipad-11.png",
+    "imageCredit": {
+      "author": "Ernekst",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:IPad_11_(A16).png"
+    },
+    "review": "The smoothest, longest-supported tablet here, with great apps for note-taking.",
+    "pros": [
+      "Fast A16 chip",
+      "Years of software updates"
+    ],
+    "cons": [
+      "Pencil and keyboard cost extra",
+      "60Hz screen at this price"
+    ],
+    "specs": {
+      "brand": "Apple",
+      "color": [
+        "Blue",
+        "Pink",
+        "Yellow",
+        "Silver"
+      ],
+      "chipset": "Apple A16",
+      "ramGB": 6,
+      "storageGB": 128,
+      "screenInches": 11,
+      "refreshHz": 60,
+      "batteryMah": 7600,
+      "weightG": 477,
+      "os": "iPadOS",
+      "stylusSupport": true,
+      "keyboardSupport": true,
+      "cellular": false
+    }
+  },
+  {
+    "id": "ph-galaxy-tab-a9plus",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Samsung Galaxy Tab A9+",
+    "price": 13990,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/galaxy-tab-a9plus.jpg",
+    "imageCredit": {
+      "author": "JGBlue1509",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_Tab_A9%2B_tablet.jpg"
+    },
+    "review": "A good-value Samsung tablet for movies and browsing.",
+    "pros": [
+      "90Hz screen",
+      "8GB RAM"
+    ],
+    "cons": [
+      "No stylus support",
+      "Average battery"
+    ],
+    "specs": {
+      "brand": "Samsung",
+      "color": [
+        "Graphite",
+        "Silver"
+      ],
+      "chipset": "Snapdragon 695",
+      "ramGB": 8,
+      "storageGB": 128,
+      "screenInches": 11,
+      "refreshHz": 90,
+      "batteryMah": 7040,
+      "weightG": 480,
+      "os": "Android",
+      "stylusSupport": false,
+      "keyboardSupport": false,
+      "cellular": false
+    }
+  }
+]

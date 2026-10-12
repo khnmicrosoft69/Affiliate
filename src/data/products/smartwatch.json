@@ -1,0 +1,118 @@
+[
+  {
+    "id": "ph-xiaomi-smart-band-9",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Xiaomi Smart Band 9",
+    "price": 2299,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A cheap, simple band with excellent battery life for steps, sleep and heart rate.",
+    "pros": [
+      "Up to 21-day battery",
+      "Works with Android and iPhone"
+    ],
+    "cons": [
+      "No built-in GPS",
+      "Small screen"
+    ],
+    "specs": {
+      "brand": "Xiaomi",
+      "color": [
+        "Midnight Black",
+        "Glacier Silver",
+        "Mystic Rose"
+      ],
+      "formFactor": "Fitness band",
+      "screenInches": 1.62,
+      "batteryDays": 21,
+      "waterResistance": "5 ATM",
+      "gps": false,
+      "heartRate": true,
+      "spo2": true,
+      "calls": false,
+      "nfc": false,
+      "worksWith": [
+        "Android",
+        "iPhone"
+      ]
+    }
+  },
+  {
+    "id": "ph-huawei-watch-fit-4",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Huawei Watch Fit 4",
+    "price": 7999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A sporty smartwatch with GPS and a big screen, good for running.",
+    "pros": [
+      "Built-in GPS",
+      "About 10-day battery"
+    ],
+    "cons": [
+      "Fewer apps than Apple Watch",
+      "No tap-to-pay"
+    ],
+    "specs": {
+      "brand": "Huawei",
+      "color": [
+        "Black",
+        "White",
+        "Purple"
+      ],
+      "formFactor": "Smartwatch",
+      "screenInches": 1.82,
+      "batteryDays": 10,
+      "waterResistance": "5 ATM",
+      "gps": true,
+      "heartRate": true,
+      "spo2": true,
+      "calls": true,
+      "nfc": false,
+      "worksWith": [
+        "Android",
+        "iPhone"
+      ]
+    }
+  },
+  {
+    "id": "ph-apple-watch-se",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Apple Watch SE (GPS, 40mm)",
+    "price": 14490,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "The best smartwatch for iPhone users, but it needs charging every day.",
+    "pros": [
+      "Tap to pay and lots of apps",
+      "Smooth with iPhone"
+    ],
+    "cons": [
+      "About 1-day battery",
+      "Doesn't work with Android"
+    ],
+    "specs": {
+      "brand": "Apple",
+      "color": [
+        "Midnight",
+        "Starlight",
+        "Silver"
+      ],
+      "formFactor": "Smartwatch",
+      "screenInches": 1.57,
+      "batteryDays": 1,
+      "waterResistance": "5 ATM",
+      "gps": true,
+      "heartRate": true,
+      "spo2": false,
+      "calls": true,
+      "nfc": true,
+      "worksWith": [
+        "iPhone"
+      ]
+    }
+  }
+]

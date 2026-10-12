@@ -1,0 +1,33 @@
+---
+// The finder tool. Address: /find/
+// The code between the --- lines runs when the site is BUILT, not in the browser.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Finder from '../components/Finder';
+import { getAllProducts } from '../lib/products';
+import { SITE_NAME } from '../lib/site';
+
+const products = await getAllProducts();
+---
+
+<BaseLayout
+  wide
+  title={`Laptop, Gadget & Tech Accessories Finder | ${SITE_NAME}`}
+  description="Pick a laptop, tablet, earbuds, power bank, smartwatch or any everyday tech accessory, set your budget and specs, and we'll rank the best matches for you."
+>
+  <div class="find-page">
+    <h1>Find the right gadget for you</h1>
+    <p class="lead">
+      Pick a category and set your filters on the right. We remove what doesn't fit, then rank the
+      rest from best to worst match.
+    </p>
+
+  <!-- client:load = "send this React component's JavaScript to the browser
+       so it becomes interactive". Without it, it would be plain static HTML. -->
+    <Finder client:load products={products} />
+  </div>
+</BaseLayout>
+
+<style>
+  /* This page uses the full width (wide), so give it its own max width. */
+  .find-page { max-width: 1200px; margin: 0 auto; padding: 0 16px 48px; }
+</style>

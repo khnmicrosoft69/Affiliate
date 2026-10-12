@@ -1,0 +1,740 @@
+[
+  {
+    "id": "ph-acer-aspire-lite-14-r5",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Acer Aspire Lite 14 (Ryzen 5)",
+    "price": 27999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/acer-aspire-lite-14.jpg",
+    "imageCredit": {
+      "author": "Rakoon",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspire_Lite_14_2025.jpg"
+    },
+    "review": "A strong value pick: 16GB RAM and a fast SSD at under ₱28,000, enough for coding and school work for years.",
+    "pros": [
+      "16GB RAM at this price",
+      "Taller 16:10 screen"
+    ],
+    "cons": [
+      "No backlit keyboard",
+      "Battery is only average"
+    ],
+    "specs": {
+      "ramGB": 16,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "cpu": "AMD Ryzen 5",
+      "gpu": "Integrated Radeon",
+      "dedicatedGpu": false,
+      "batteryHours": 8,
+      "weightKg": 1.4,
+      "screenInches": 14,
+      "brand": "Acer",
+      "color": [
+        "Silver"
+      ],
+      "resolution": "1920×1200",
+      "refreshHz": 60,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": false,
+      "fingerprint": true,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI"
+      ]
+    }
+  },
+  {
+    "id": "ph-lenovo-ideapad-slim-3-i5",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Lenovo IdeaPad Slim 3 (Core i5)",
+    "price": 32995,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A safe, balanced everyday laptop with a big 15.6-inch screen and good battery life.",
+    "pros": [
+      "10-hour battery",
+      "Backlit keyboard"
+    ],
+    "cons": [
+      "1.6 kg is a bit heavy to carry daily",
+      "Plain 60Hz screen"
+    ],
+    "specs": {
+      "ramGB": 16,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "cpu": "Intel Core i5",
+      "gpu": "Intel Iris Xe",
+      "dedicatedGpu": false,
+      "batteryHours": 10,
+      "weightKg": 1.6,
+      "screenInches": 15.6,
+      "brand": "Lenovo",
+      "color": [
+        "Arctic Grey",
+        "Abyss Blue"
+      ],
+      "resolution": "1920×1080",
+      "refreshHz": 60,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": true,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI",
+        "SD card"
+      ]
+    }
+  },
+  {
+    "id": "ph-asus-vivobook-go-14",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – ASUS Vivobook Go 14",
+    "price": 21995,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Fine for notes, browsing and online classes, but you'll feel its limits with heavier apps.",
+    "pros": [
+      "Light at 1.38 kg",
+      "Affordable"
+    ],
+    "cons": [
+      "Only 8GB RAM and 256GB storage",
+      "TN screen has poor viewing angles"
+    ],
+    "specs": {
+      "ramGB": 8,
+      "storageGB": 256,
+      "storageType": "SSD",
+      "cpu": "AMD Ryzen 3",
+      "gpu": "Integrated Radeon",
+      "dedicatedGpu": false,
+      "batteryHours": 7,
+      "weightKg": 1.38,
+      "screenInches": 14,
+      "brand": "ASUS",
+      "color": [
+        "Mixed Black",
+        "Cool Silver"
+      ],
+      "resolution": "1920×1080",
+      "refreshHz": 60,
+      "panel": "TN",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": false,
+      "fingerprint": false,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI"
+      ]
+    }
+  },
+  {
+    "id": "ph-hp-15-celeron",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – HP 15 (Celeron)",
+    "price": 16990,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Hard to recommend: 4GB RAM and slow eMMC storage make it feel slow even for browsing. Spend a bit more if you can.",
+    "pros": [
+      "Cheapest laptop here"
+    ],
+    "cons": [
+      "4GB RAM and slow eMMC storage",
+      "Low-resolution 1366×768 screen"
+    ],
+    "specs": {
+      "ramGB": 4,
+      "storageGB": 128,
+      "storageType": "eMMC",
+      "cpu": "Intel Celeron",
+      "gpu": "Intel UHD",
+      "dedicatedGpu": false,
+      "batteryHours": 6,
+      "weightKg": 1.7,
+      "screenInches": 15.6,
+      "brand": "HP",
+      "color": [
+        "Jet Black"
+      ],
+      "resolution": "1366×768",
+      "refreshHz": 60,
+      "panel": "TN",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": false,
+      "fingerprint": false,
+      "os": "Windows",
+      "ports": [
+        "USB-A",
+        "HDMI"
+      ]
+    }
+  },
+  {
+    "id": "ph-acer-nitro-v15-rtx3050",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Acer Nitro V 15 (RTX 3050)",
+    "price": 44999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/acer-nitro-v15.jpg",
+    "imageCredit": {
+      "author": "P1898",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Acer_Nitro_V_15_2026-08-15_gaming_laptop_01.jpg"
+    },
+    "review": "A real gaming laptop at a mid-range price, but plan to add more RAM.",
+    "pros": [
+      "RTX 3050 graphics",
+      "144Hz screen"
+    ],
+    "cons": [
+      "Only 8GB RAM",
+      "Short battery life and 2.1 kg"
+    ],
+    "specs": {
+      "ramGB": 8,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "cpu": "Intel Core i5",
+      "gpu": "NVIDIA RTX 3050",
+      "dedicatedGpu": true,
+      "batteryHours": 5,
+      "weightKg": 2.1,
+      "screenInches": 15.6,
+      "brand": "Acer",
+      "color": [
+        "Obsidian Black"
+      ],
+      "resolution": "1920×1080",
+      "refreshHz": 144,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": false,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI",
+        "Ethernet"
+      ]
+    }
+  },
+  {
+    "id": "ph-lenovo-loq-15-rtx2050",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Lenovo LOQ 15 (RTX 2050)",
+    "price": 39995,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Good for light gaming and school, with plenty of RAM, but the RTX 2050 is an entry-level graphics chip.",
+    "pros": [
+      "16GB RAM",
+      "144Hz screen"
+    ],
+    "cons": [
+      "RTX 2050 is weak for new games",
+      "Heavy at 2.4 kg"
+    ],
+    "specs": {
+      "ramGB": 16,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "cpu": "Intel Core i5",
+      "gpu": "NVIDIA RTX 2050",
+      "dedicatedGpu": true,
+      "batteryHours": 5,
+      "weightKg": 2.4,
+      "screenInches": 15.6,
+      "brand": "Lenovo",
+      "color": [
+        "Luna Grey"
+      ],
+      "resolution": "1920×1080",
+      "refreshHz": 144,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": false,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI",
+        "Ethernet"
+      ]
+    }
+  },
+  {
+    "id": "ph-huawei-matebook-d14",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Huawei MateBook D14 (Core i5)",
+    "price": 34999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/huawei-matebook-d14.jpg",
+    "imageCredit": {
+      "author": "メイド理世",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Huawei_MateBook_D_14.jpg"
+    },
+    "review": "One of the best all-rounders here: light, long battery and a sharp 16:10 screen.",
+    "pros": [
+      "11-hour battery",
+      "Light at 1.39 kg"
+    ],
+    "cons": [
+      "Pricier than similar Ryzen laptops",
+      "No dedicated graphics"
+    ],
+    "specs": {
+      "ramGB": 16,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "cpu": "Intel Core i5",
+      "gpu": "Intel Iris Xe",
+      "dedicatedGpu": false,
+      "batteryHours": 11,
+      "weightKg": 1.39,
+      "screenInches": 14,
+      "brand": "Huawei",
+      "color": [
+        "Space Grey",
+        "Mystic Silver"
+      ],
+      "resolution": "1920×1200",
+      "refreshHz": 60,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": true,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI"
+      ]
+    }
+  },
+  {
+    "id": "ph-chuwi-gemibook-12gb",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Chuwi GemiBook (12GB)",
+    "price": 18500,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/chuwi-gemibook.jpg",
+    "imageCredit": {
+      "author": "photo: Qurren",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chuwi_GemiBook_XPro.jpg"
+    },
+    "review": "Surprisingly sharp screen and lots of storage for the price, but the N100 chip is slow for heavy work.",
+    "pros": [
+      "Sharp 2160×1440 screen",
+      "512GB SSD under ₱20,000"
+    ],
+    "cons": [
+      "Slow Intel N100 processor",
+      "Lesser-known brand, so check warranty support"
+    ],
+    "specs": {
+      "ramGB": 12,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "cpu": "Intel N100",
+      "gpu": "Intel UHD",
+      "dedicatedGpu": false,
+      "batteryHours": 8,
+      "weightKg": 1.5,
+      "screenInches": 14,
+      "brand": "Chuwi",
+      "color": [
+        "Grey"
+      ],
+      "resolution": "2160×1440",
+      "refreshHz": 60,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": false,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A"
+      ]
+    }
+  },
+  {
+    "id": "ph-macbook-air-13-m4",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Apple MacBook Air 13 (M4, 16GB)",
+    "price": 64990,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/macbook-air-13-m4.jpg",
+    "imageCredit": {
+      "author": "AzureSaturn",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:MacBook_Air_(13-inch,_M4,_Silver).jpg"
+    },
+    "review": "Excellent battery and build, and very fast for coding and design. Expensive, and 256GB fills up quickly.",
+    "pros": [
+      "About 18-hour battery",
+      "Very light and silent (no fan)"
+    ],
+    "cons": [
+      "Only 256GB storage at this price",
+      "Most expensive option here"
+    ],
+    "specs": {
+      "brand": "Apple",
+      "cpu": "Apple M4",
+      "gpu": "Apple M4 (10-core)",
+      "dedicatedGpu": false,
+      "storageType": "SSD",
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": true,
+      "os": "macOS",
+      "ports": [
+        "USB-C",
+        "Thunderbolt"
+      ],
+      "color": [
+        "Midnight",
+        "Starlight",
+        "Silver",
+        "Sky Blue"
+      ],
+      "ramGB": 16,
+      "storageGB": 256,
+      "screenInches": 13.6,
+      "resolution": "2560×1664",
+      "refreshHz": 60,
+      "batteryHours": 18,
+      "weightKg": 1.24
+    }
+  },
+  {
+    "id": "ph-macbook-air-15-m4",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Apple MacBook Air 15 (M4, 16GB)",
+    "price": 79990,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/macbook-air-15-m4.jpg",
+    "imageCredit": {
+      "author": "AzureSaturn",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:MacBook_Air_(15-inch,_M4,_Silver).jpg"
+    },
+    "review": "The same great MacBook Air in a bigger size, with more storage. Great for long study sessions if the budget allows.",
+    "pros": [
+      "Big 15.3-inch screen",
+      "512GB storage"
+    ],
+    "cons": [
+      "Very expensive",
+      "Not for gaming"
+    ],
+    "specs": {
+      "brand": "Apple",
+      "cpu": "Apple M4",
+      "gpu": "Apple M4 (10-core)",
+      "dedicatedGpu": false,
+      "storageType": "SSD",
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": true,
+      "os": "macOS",
+      "ports": [
+        "USB-C",
+        "Thunderbolt"
+      ],
+      "color": [
+        "Midnight",
+        "Starlight",
+        "Silver",
+        "Sky Blue"
+      ],
+      "ramGB": 16,
+      "storageGB": 512,
+      "screenInches": 15.3,
+      "resolution": "2880×1864",
+      "refreshHz": 60,
+      "batteryHours": 18,
+      "weightKg": 1.51
+    }
+  },
+  {
+    "id": "ph-lenovo-ideapad-slim-5-r5",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Lenovo IdeaPad Slim 5 (Ryzen 5, OLED)",
+    "price": 42995,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A step up from budget laptops: an OLED screen, solid battery and 16GB RAM in a light body.",
+    "pros": [
+      "Bright, colorful OLED screen",
+      "16GB RAM and 512GB SSD"
+    ],
+    "cons": [
+      "Costs more than the IdeaPad Slim 3",
+      "OLED can show burn-in over years"
+    ],
+    "specs": {
+      "brand": "Lenovo",
+      "color": [
+        "Cosmic Blue"
+      ],
+      "cpu": "AMD Ryzen 5",
+      "gpu": "Integrated Radeon",
+      "dedicatedGpu": false,
+      "ramGB": 16,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "screenInches": 14,
+      "resolution": "1920×1200",
+      "refreshHz": 60,
+      "panel": "OLED",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": true,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI",
+        "SD card"
+      ],
+      "batteryHours": 12,
+      "weightKg": 1.46
+    }
+  },
+  {
+    "id": "ph-asus-vivobook-16-i5",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – ASUS Vivobook 16 (Core i5)",
+    "price": 36995,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A big-screen laptop for spreadsheets and side-by-side windows, at a fair price.",
+    "pros": [
+      "Large 16-inch screen",
+      "16GB RAM"
+    ],
+    "cons": [
+      "Heavier at 1.88 kg",
+      "Average battery"
+    ],
+    "specs": {
+      "brand": "ASUS",
+      "color": [
+        "Quiet Blue",
+        "Cool Silver"
+      ],
+      "cpu": "Intel Core i5",
+      "gpu": "Intel Iris Xe",
+      "dedicatedGpu": false,
+      "ramGB": 16,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "screenInches": 16,
+      "resolution": "1920×1200",
+      "refreshHz": 60,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": true,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI"
+      ],
+      "batteryHours": 8,
+      "weightKg": 1.88
+    }
+  },
+  {
+    "id": "ph-acer-swift-go-14",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Acer Swift Go 14 (Core Ultra 5, OLED)",
+    "price": 49999,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Premium feel and battery life without MacBook prices, a great pick for students who carry their laptop all day.",
+    "pros": [
+      "Very light at 1.32 kg",
+      "OLED screen and long battery"
+    ],
+    "cons": [
+      "Pricey for Windows",
+      "Integrated graphics only"
+    ],
+    "specs": {
+      "brand": "Acer",
+      "color": [
+        "Pure Silver"
+      ],
+      "cpu": "Intel Core Ultra 5",
+      "gpu": "Intel Arc (integrated)",
+      "dedicatedGpu": false,
+      "ramGB": 16,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "screenInches": 14,
+      "resolution": "2880×1800",
+      "refreshHz": 90,
+      "panel": "OLED",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": true,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "Thunderbolt",
+        "USB-A",
+        "HDMI",
+        "SD card"
+      ],
+      "batteryHours": 13,
+      "weightKg": 1.32
+    }
+  },
+  {
+    "id": "ph-msi-modern-14",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – MSI Modern 14 (Ryzen 5)",
+    "price": 24999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A simple, light budget laptop that's fine for documents and online classes.",
+    "pros": [
+      "Light at 1.4 kg",
+      "Under ₱25,000"
+    ],
+    "cons": [
+      "Only 8GB RAM",
+      "Basic screen"
+    ],
+    "specs": {
+      "brand": "MSI",
+      "color": [
+        "Classic Black"
+      ],
+      "cpu": "AMD Ryzen 5",
+      "gpu": "Integrated Radeon",
+      "dedicatedGpu": false,
+      "ramGB": 8,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "screenInches": 14,
+      "resolution": "1920×1080",
+      "refreshHz": 60,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": false,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI"
+      ],
+      "batteryHours": 8,
+      "weightKg": 1.4
+    }
+  },
+  {
+    "id": "ph-asus-tuf-a15-rtx4050",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – ASUS TUF Gaming A15 (RTX 4050)",
+    "price": 59995,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "The strongest gaming laptop here, with a newer RTX 4050 and 16GB RAM. Bulky and costly, though.",
+    "pros": [
+      "RTX 4050 graphics",
+      "16GB RAM and 144Hz screen"
+    ],
+    "cons": [
+      "Heavy at 2.2 kg",
+      "Short battery life when gaming"
+    ],
+    "specs": {
+      "brand": "ASUS",
+      "color": [
+        "Graphite Black"
+      ],
+      "cpu": "AMD Ryzen 7",
+      "gpu": "NVIDIA RTX 4050",
+      "dedicatedGpu": true,
+      "ramGB": 16,
+      "storageGB": 512,
+      "storageType": "SSD",
+      "screenInches": 15.6,
+      "resolution": "1920×1080",
+      "refreshHz": 144,
+      "panel": "IPS",
+      "touchscreen": false,
+      "formFactor": "Clamshell",
+      "backlitKeyboard": true,
+      "fingerprint": false,
+      "os": "Windows",
+      "ports": [
+        "USB-C",
+        "USB-A",
+        "HDMI",
+        "Ethernet"
+      ],
+      "batteryHours": 6,
+      "weightKg": 2.2
+    }
+  }
+]

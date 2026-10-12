@@ -1,0 +1,142 @@
+[
+  {
+    "id": "ph-soundcore-p40i",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – soundcore P40i",
+    "price": 2499,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Hard to beat for the price: noise cancelling, very long battery and a game mode.",
+    "pros": [
+      "ANC under ₱2,500",
+      "Up to 60 hours with the case"
+    ],
+    "cons": [
+      "Noise cancelling is weaker than premium brands"
+    ],
+    "specs": {
+      "brand": "Anker",
+      "color": [
+        "Black",
+        "White",
+        "Blue"
+      ],
+      "formFactor": "True wireless earbuds",
+      "connection": [
+        "Bluetooth"
+      ],
+      "anc": true,
+      "batteryHours": 60,
+      "waterResistance": "IPX5",
+      "lowLatency": true,
+      "multipoint": true,
+      "mic": true
+    }
+  },
+  {
+    "id": "ph-sony-wh-ch720n",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Sony WH-CH720N",
+    "price": 6999,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Comfortable, light over-ear headphones with good noise cancelling for long commutes.",
+    "pros": [
+      "Comfortable for hours",
+      "Connects to 2 devices"
+    ],
+    "cons": [
+      "No water resistance",
+      "Plastic build"
+    ],
+    "specs": {
+      "brand": "Sony",
+      "color": [
+        "Black",
+        "White",
+        "Blue"
+      ],
+      "formFactor": "Over-ear",
+      "connection": [
+        "Bluetooth",
+        "Wired"
+      ],
+      "anc": true,
+      "batteryHours": 35,
+      "waterResistance": "None",
+      "lowLatency": false,
+      "multipoint": true,
+      "mic": true
+    }
+  },
+  {
+    "id": "ph-qcy-melobuds",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – QCY MeloBuds",
+    "price": 899,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Very cheap earbuds that work fine for music and calls.",
+    "pros": [
+      "Under ₱1,000",
+      "Water resistant"
+    ],
+    "cons": [
+      "No noise cancelling",
+      "Basic sound quality"
+    ],
+    "specs": {
+      "brand": "QCY",
+      "color": [
+        "Black",
+        "White"
+      ],
+      "formFactor": "True wireless earbuds",
+      "connection": [
+        "Bluetooth"
+      ],
+      "anc": false,
+      "batteryHours": 30,
+      "waterResistance": "IPX5",
+      "lowLatency": true,
+      "multipoint": false,
+      "mic": true
+    }
+  },
+  {
+    "id": "ph-hyperx-cloud-stinger-2",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – HyperX Cloud Stinger 2",
+    "price": 2795,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A comfortable, simple wired gaming headset with a flip-to-mute mic.",
+    "pros": [
+      "Light and comfortable",
+      "Good mic for games"
+    ],
+    "cons": [
+      "Wired only",
+      "No noise cancelling"
+    ],
+    "specs": {
+      "brand": "HyperX",
+      "color": [
+        "Black"
+      ],
+      "formFactor": "Over-ear",
+      "connection": [
+        "Wired"
+      ],
+      "anc": false,
+      "waterResistance": "None",
+      "lowLatency": true,
+      "multipoint": false,
+      "mic": true
+    }
+  }
+]

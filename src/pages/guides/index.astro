@@ -1,0 +1,32 @@
+---
+// List of all guides. Address: /guides/
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { GUIDES } from '../../lib/guides';
+import { SITE_NAME } from '../../lib/site';
+---
+
+<BaseLayout
+  title={`Buying Guides for Students | ${SITE_NAME}`}
+  description="Simple, honest buying guides for students: which laptops, gadgets and tech accessories are worth it, and what specs actually matter."
+>
+  <h1>Buying guides</h1>
+  <p class="lead">Short, honest guides that explain what matters, then link you to the finder.</p>
+  {
+    GUIDES.map((g) => (
+      <a class="guide-link card" href={g.href}>
+        <small>{g.tag}</small>
+        <h2>{g.title}</h2>
+        <p>{g.blurb}</p>
+      </a>
+    ))
+  }
+</BaseLayout>
+
+<style>
+  /* <style> in an .astro file only affects THIS page ("scoped" styles). */
+  .guide-link { display: block; color: inherit; text-decoration: none; }
+  .guide-link:hover { border-color: var(--accent); }
+  .guide-link small { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .guide-link h2 { margin: 4px 0 6px; }
+  .guide-link p { margin: 0; color: var(--muted); }
+</style>

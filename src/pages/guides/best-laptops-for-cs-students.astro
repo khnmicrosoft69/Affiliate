@@ -1,0 +1,65 @@
+---
+// Guide page. Address: /guides/best-laptops-for-cs-students/
+// The file name becomes the web address, so keep it short and full of search words.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ResultCard from '../../components/ResultCard';
+import { findMatches } from '../../lib/match';
+import { getAllProducts } from '../../lib/products';
+import { getCategory } from '../../lib/categories';
+import { SITE_NAME } from '../../lib/site';
+
+const products = await getAllProducts();
+// Use the SAME ranking as the finder, with its "Good for coding" quick pick.
+const coding = getCategory('laptop').presets.find((p) => p.id === 'coding')!;
+const picks = findMatches(products, {
+  country: 'PH',
+  category: 'laptop',
+  budget: null,
+  reqs: coding.reqs,
+}).slice(0, 5); // top 5 only
+---
+
+<BaseLayout
+  title={`Best Laptops for CS Students (2026) | ${SITE_NAME}`}
+  description="What specs a Computer Science student really needs, plus our top laptop picks from trusted stores for coding, school, and long battery life."
+>
+  <article class="guide">
+    <h1>Best Laptops for CS Students</h1>
+    <p class="lead">
+      You don't need an expensive laptop to study Computer Science. You need the right specs. Here's
+      what matters and which laptops fit.
+    </p>
+
+    <h2>What specs does a CS student need?</h2>
+    <ul>
+      <li>
+        <strong>RAM: 8GB minimum, 16GB recommended.</strong> RAM is short-term memory. VS Code, a browser
+        with many tabs, and an Android emulator together can easily use more than 8GB.
+      </li>
+      <li>
+        <strong>Storage: SSD, at least 256GB.</strong> An SSD makes opening apps and compiling code much
+        faster than eMMC or a hard drive (HDD).
+      </li>
+      <li>
+        <strong>Processor: Ryzen 5 / Core i5 or better</strong> for comfortable everyday coding. Ryzen 3 /
+        Core i3 works for basic programming classes.
+      </li>
+      <li>
+        <strong>Battery: 8+ hours</strong> if you code during long school days with few outlets.
+      </li>
+      <li>
+        <strong>Graphics card (GPU):</strong> not needed for most CS subjects. Only get one if you also
+        game or plan to do machine learning or game development.
+      </li>
+    </ul>
+
+    <h2>Top picks right now</h2>
+    <p>Ranked by our finder's "Good for coding" settings: SSD, 16GB RAM preferred, long battery.</p>
+    {picks.map((m, i) => <ResultCard match={m} rank={i + 1} showScore={false} />)}
+
+    <div class="cta card">
+      <p><strong>Have a specific budget?</strong> Let the finder rank laptops for your exact needs.</p>
+      <a class="button" href="/find/?category=laptop&preset=coding">Open the laptop finder →</a>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ph-ugreen-6in1-usbc",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – UGREEN 6-in-1 USB-C Hub",
+    "price": 1499,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Adds the ports most thin laptops are missing: HDMI, USB-A and card readers.",
+    "pros": [
+      "HDMI and SD card",
+      "100W pass-through charging"
+    ],
+    "cons": [
+      "HDMI is 30Hz at 4K"
+    ],
+    "specs": {
+      "brand": "UGREEN",
+      "color": [
+        "Grey"
+      ],
+      "formFactor": "Hub",
+      "connector": "USB-C",
+      "portCount": 6,
+      "ports": [
+        "HDMI",
+        "USB-A",
+        "USB-C",
+        "SD card",
+        "microSD"
+      ],
+      "hdmi4k60": false,
+      "passThroughW": 100
+    }
+  },
+  {
+    "id": "ph-baseus-usbc-hdmi",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Baseus USB-C to HDMI Adapter (4K)",
+    "price": 599,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A small adapter for presentations and an external monitor.",
+    "pros": [
+      "4K at 60Hz",
+      "Pocket-sized"
+    ],
+    "cons": [
+      "HDMI only, no other ports"
+    ],
+    "specs": {
+      "brand": "Baseus",
+      "color": [
+        "Grey"
+      ],
+      "formFactor": "Dongle",
+      "connector": "USB-C",
+      "portCount": 1,
+      "ports": [
+        "HDMI"
+      ],
+      "hdmi4k60": true
+    }
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ph-xiaomi-commuter-backpack",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Xiaomi Commuter Backpack",
+    "price": 1199,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A clean, light everyday backpack with water resistance.",
+    "pros": [
+      "Light at 700 g",
+      "Water resistant"
+    ],
+    "cons": [
+      "No anti-theft pocket",
+      "Smaller 21L capacity"
+    ],
+    "specs": {
+      "brand": "Xiaomi",
+      "color": [
+        "Dark Grey",
+        "Light Grey"
+      ],
+      "formFactor": "Backpack",
+      "fitsInches": 15.6,
+      "capacityL": 21,
+      "weightG": 700,
+      "waterResistant": true,
+      "antiTheft": false,
+      "usbPort": false
+    }
+  },
+  {
+    "id": "ph-tomtoc-a13-sleeve",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – tomtoc 360 Protective Laptop Sleeve (14-inch)",
+    "price": 1690,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Strong corner protection for carrying your laptop inside another bag.",
+    "pros": [
+      "Protects corners from drops",
+      "Water resistant"
+    ],
+    "cons": [
+      "Only fits the laptop and a charger"
+    ],
+    "specs": {
+      "brand": "tomtoc",
+      "color": [
+        "Black",
+        "Grey",
+        "Blue"
+      ],
+      "formFactor": "Sleeve",
+      "fitsInches": 14,
+      "capacityL": 2,
+      "weightG": 300,
+      "waterResistant": true,
+      "antiTheft": false,
+      "usbPort": false
+    }
+  },
+  {
+    "id": "ph-tigernu-anti-theft",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Tigernu Anti-Theft Laptop Backpack",
+    "price": 1499,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A roomy commuter backpack with an anti-theft pocket and a USB port for your power bank.",
+    "pros": [
+      "Anti-theft pocket",
+      "25L capacity"
+    ],
+    "cons": [
+      "Heavier at 900 g",
+      "USB port needs your own power bank"
+    ],
+    "specs": {
+      "brand": "Tigernu",
+      "color": [
+        "Black",
+        "Grey"
+      ],
+      "formFactor": "Backpack",
+      "fitsInches": 15.6,
+      "capacityL": 25,
+      "weightG": 900,
+      "waterResistant": true,
+      "antiTheft": true,
+      "usbPort": true
+    }
+  }
+]

@@ -1,0 +1,52 @@
+---
+// About page. Address: /about/
+// Tells visitors (and Google) who runs the site and how picks are made. This builds trust.
+// TODO: rewrite the first section in your own words.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CONTACT_EMAIL, OWNER_NAME, SITE_NAME } from '../lib/site';
+---
+
+<BaseLayout
+  title={`About | ${SITE_NAME}`}
+  description={`Who runs ${SITE_NAME}, how products are ranked, and how the site earns money, explained plainly.`}
+>
+  <article class="guide">
+    <h1>About {SITE_NAME}</h1>
+    <p class="lead">Honest help choosing gadgets, made by a student for students.</p>
+
+    <h2>Who we are</h2>
+    <p>
+      Hi, I'm <strong>{OWNER_NAME}</strong>, a Computer Science student. I built {SITE_NAME} because
+      shopping for a laptop meant dozens of open tabs, confusing spec sheets and reviews that only
+      praised expensive models. I wanted a tool that asks what you actually need and shows the best
+      fits, with honest reasons.
+    </p>
+
+    <h2>How picks are ranked</h2>
+    <ul>
+      <li>You choose what matters: budget, specs, and preferences like battery life or weight.</li>
+      <li>Products missing a "Must have" are removed. The rest are ranked by how well they fit your answers, not by price or commission.</li>
+      <li>Every product shows what it does well <em>and</em> its downsides. Every product, expensive ones included, has at least one con.</li>
+      <li>Reviews are based on each product's published specs and how they compare with the alternatives.</li>
+    </ul>
+
+    <h2>Prices</h2>
+    <p>
+      Prices are checked by hand, and each product shows the date it was last checked. Store prices change often,
+      especially during sales, so always confirm the price on the store page before buying.
+    </p>
+
+    <h2>How the site earns money</h2>
+    <p>
+      Some "Buy" links are affiliate links. If you buy through them, the store pays us a small commission at no extra
+      cost to you. That keeps the site free. It never changes the ranking: a cheaper product that fits you
+      better will always rank higher.
+    </p>
+
+    <h2>Get in touch</h2>
+    <p>
+      Spotted a wrong price or spec, or want a product added? Email
+      <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> or visit the <a href="/contact/">contact page</a>.
+    </p>
+  </article>
+</BaseLayout>

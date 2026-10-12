@@ -1,0 +1,36 @@
+---
+// Contact page. Address: /contact/
+// A simple email link: no form, no server and no spam-bot problems.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CONTACT_EMAIL, SITE_NAME } from '../lib/site';
+---
+
+<BaseLayout
+  title={`Contact | ${SITE_NAME}`}
+  description={`Contact ${SITE_NAME} to report a wrong price, suggest a product, or ask a question about choosing a gadget.`}
+>
+  <article class="guide">
+    <h1>Contact</h1>
+    <p class="lead">Questions, corrections or suggestions are always welcome.</p>
+
+    <div class="card contact-card">
+      <p>Email us at</p>
+      <a class="button" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+    </div>
+
+    <h2>Good reasons to write</h2>
+    <ul>
+      <li><strong>Wrong price or spec:</strong> tell us the product name and what's different.</li>
+      <li><strong>Product request:</strong> a laptop or accessory you'd like us to add.</li>
+      <li><strong>Your country isn't supported yet:</strong> tell us where you are. It helps us decide where to expand.</li>
+      <li><strong>Business or affiliate questions.</strong></li>
+    </ul>
+    <p>We usually reply within a few days.</p>
+  </article>
+</BaseLayout>
+
+<style>
+  .contact-card { text-align: center; padding: 28px 18px; }
+  .contact-card p { margin: 0 0 12px; color: var(--muted); }
+  .contact-card .button { overflow-wrap: anywhere; }
+</style>

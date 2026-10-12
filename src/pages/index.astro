@@ -1,0 +1,539 @@
+---
+// The landing page. Address: /
+// Its job: explain the site in 5 seconds and send people to the finder (/find/).
+// It's 100% static HTML (no React), so it loads very fast, which Google likes.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PhotoCredit from '../components/PhotoCredit';
+import ProductImage from '../components/ProductImage';
+import { getAllProducts } from '../lib/products';
+import { CATEGORIES, getCategory } from '../lib/categories';
+import { DEFAULT_COUNTRY, formatPrice } from '../lib/countries';
+import { findMatches } from '../lib/match';
+import { GUIDES } from '../lib/guides';
+import { SITE_NAME } from '../lib/site';
+
+const products = await getAllProducts();
+const country = DEFAULT_COUNTRY;
+
+// A REAL result for the hero card: the #1 laptop for "Good for coding".
+// When you update products.json, this card updates by itself.
+const coding = getCategory('laptop').presets.find((p) => p.id === 'coding')!;
+const heroPick = findMatches(products, {
+  country: country.code,
+  category: 'laptop',
+  budget: null,
+  reqs: coding.reqs,
+})[0];
+
+// How many products each category has, in all countries (shown on the category tiles).
+const countFor = (id: string) => products.filter((p) => p.category === id).length;
+
+// Simple line icons (24×24). "d" is the SVG drawing path.
+const ICONS: Record<string, string> = {
+  code: 'M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 5l-3 14',
+  book: 'M2 5h6a4 4 0 014 4v11a3 3 0 00-3-3H2zM22 5h-6a4 4 0 00-4 4v11a3 3 0 013-3h7z',
+  headphones: 'M3 18v-6a9 9 0 0118 0v6M21 19a2 2 0 01-2 2h-1v-7h3zM3 19a2 2 0 002 2h1v-7H3z',
+  monitor: 'M3 4h18v12H3zM8 20h8M12 16v4',
+};
+
+const useCases = [
+  {
+    icon: 'code',
+    title: 'Deep work & coding',
+    text: '16GB RAM, a fast SSD and a battery that outlasts your longest study session.',
+    href: '/find/?category=laptop&preset=coding',
+  },
+  {
+    icon: 'book',
+    title: 'Classes on the go',
+    text: 'Light laptops that last from your 7 a.m. class to the last bell.',
+    href: '/find/?category=laptop&preset=school',
+  },
+  {
+    icon: 'headphones',
+    title: 'Focus anywhere',
+    text: 'Noise-cancelling earbuds for jeepney rides, cafés and loud dorms.',
+    href: '/find/?category=audio&preset=commute',
+  },
+  {
+    icon: 'monitor',
+    title: 'A desk that works',
+    text: 'Monitors and keyboards made for long, comfortable work sessions.',
+    href: '/find/?category=monitor&preset=work',
+  },
+];
+
+const steps = [
+  { title: 'Tell us how you work', text: 'Your budget, plus only the specs you care about: RAM, battery, form factor, even color.' },
+  { title: 'We filter and rank', text: 'Anything missing a must-have is removed. The rest are ranked from best to worst fit.' },
+  { title: 'Decide in minutes', text: 'Every pick says why it fits and what it gives up, with a direct link to a trusted store.' },
+];
+---
+
+<BaseLayout
+  wide
+  title={`${SITE_NAME} – Find the Right Laptop, Gadget or Tech Accessory`}
+  description="Spend less time shopping and more time doing. Tell us your budget and how you work, and we'll find the best laptop, gadget or everyday tech accessory for you."
+>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">For students &amp; creators</p>
+      <h1>Spend less time shopping. <mark>More time doing.</mark></h1>
+      <p class="hero-lead">
+        Tell us your budget and how you work or study. We filter out what doesn't fit, rank the rest,
+        and explain why each pick made the cut.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/find/">Find my gear →</a>
+        <a class="btn btn-ghost" href="/guides/">Read the guides</a>
+      </div>
+      <p class="hero-meta">
+        {CATEGORIES.length} categories · {country.stores.join(' & ')} · Free, no sign-up
+      </p>
+    </div>
+
+    <div class="hero-art">
+      <!-- A calm, focused desk. Drawn with SVG, so it's tiny and sharp on every screen.
+           aria-hidden: it's decoration, so screen readers skip it. -->
+      <svg viewBox="0 0 520 330" aria-hidden="true">
+        <circle class="sun" cx="300" cy="150" r="140"></circle>
+
+        <!-- wall clock -->
+        <circle class="clock" cx="78" cy="96" r="30"></circle>
+        <path class="hand" d="M78 96V78M78 96l12 7"></path>
+
+        <!-- monitor with code -->
+        <rect class="ink" x="150" y="62" width="250" height="160" rx="12"></rect>
+        <rect class="screen" x="160" y="72" width="230" height="140" rx="6"></rect>
+        <circle class="c-mute" cx="174" cy="86" r="3.5"></circle>
+        <circle class="c-hl" cx="186" cy="86" r="3.5"></circle>
+        <circle class="c-accent" cx="198" cy="86" r="3.5"></circle>
+        <rect class="c-accent" x="174" y="104" width="58" height="7" rx="3.5"></rect>
+        <rect class="c-mute" x="238" y="104" width="40" height="7" rx="3.5"></rect>
+        <rect class="c-hl" x="188" y="118" width="92" height="7" rx="3.5"></rect>
+        <rect class="c-mute" x="188" y="132" width="48" height="7" rx="3.5"></rect>
+        <rect class="c-accent" x="242" y="132" width="72" height="7" rx="3.5"></rect>
+        <rect class="c-mute" x="174" y="146" width="30" height="7" rx="3.5"></rect>
+        <rect class="c-mute" x="188" y="160" width="112" height="7" rx="3.5"></rect>
+        <rect class="c-accent" x="188" y="174" width="64" height="7" rx="3.5"></rect>
+        <rect class="c-hl" x="174" y="188" width="40" height="7" rx="3.5"></rect>
+        <rect class="cursor" x="218" y="188" width="3" height="9"></rect>
+        <rect class="ink" x="263" y="222" width="24" height="52"></rect>
+        <rect class="ink" x="226" y="272" width="98" height="10" rx="5"></rect>
+
+        <!-- sticky note to-do list -->
+        <g transform="rotate(-8 147 70)">
+          <rect class="note" x="116" y="40" width="62" height="62" rx="3"></rect>
+          <path class="tick" d="M126 58l4 4 8-8M126 80l4 4 8-8"></path>
+          <rect class="ink" x="144" y="56" width="24" height="4" rx="2"></rect>
+          <rect class="ink" x="144" y="78" width="18" height="4" rx="2"></rect>
+        </g>
+
+        <!-- laptop with a checklist -->
+        <rect class="ink" x="40" y="196" width="122" height="80" rx="6"></rect>
+        <rect class="screen" x="47" y="203" width="108" height="66" rx="3"></rect>
+        <circle class="c-accent" cx="60" cy="218" r="5"></circle>
+        <circle class="c-accent" cx="60" cy="236" r="5"></circle>
+        <circle class="empty" cx="60" cy="254" r="4.5"></circle>
+        <rect class="c-mute" x="71" y="215" width="62" height="6" rx="3"></rect>
+        <rect class="c-mute" x="71" y="233" width="46" height="6" rx="3"></rect>
+        <rect class="c-mute" x="71" y="251" width="70" height="6" rx="3"></rect>
+        <path class="ink-2" d="M28 276h146l10 10H18z"></path>
+
+        <!-- coffee -->
+        <path class="steam" d="M354 238c-6-8 6-12 0-22"></path>
+        <path class="steam s2" d="M368 238c-6-8 6-12 0-22"></path>
+        <rect class="mug" x="342" y="244" width="40" height="42" rx="8"></rect>
+        <path class="mug-handle" d="M382 254h5a10 10 0 010 20h-5"></path>
+
+        <!-- plant -->
+        <ellipse class="leaf" cx="436" cy="214" rx="9" ry="28"></ellipse>
+        <ellipse class="leaf" cx="421" cy="226" rx="8" ry="24" transform="rotate(-32 421 226)"></ellipse>
+        <ellipse class="leaf" cx="451" cy="226" rx="8" ry="24" transform="rotate(32 451 226)"></ellipse>
+        <path class="pot" d="M412 246h48l-6 40h-36z"></path>
+
+        <!-- desk -->
+        <rect class="desk" x="6" y="286" width="508" height="12" rx="6"></rect>
+      </svg>
+
+      {
+        heroPick && (
+          <div class="float-card">
+            <div class="fc-top">
+              <span class="fc-label">#1 · {coding.label}</span>
+              <span class="fc-score">{heroPick.score}% match</span>
+            </div>
+            <div class="fc-product">
+              <ProductImage product={heroPick.product} size="small" />
+              <div>
+                <p class="fc-name">{heroPick.product.name}</p>
+                <p class="fc-price">
+                  {formatPrice(heroPick.product.price, country)} <span>on {heroPick.product.store}</span>
+                </p>
+              </div>
+            </div>
+            <ul>
+              {heroPick.reasons.slice(0, 2).map((r) => <li>{r}</li>)}
+            </ul>
+            <PhotoCredit product={heroPick.product} />
+          </div>
+        )
+      }
+      <div class="float-pill">Found in 2 minutes, not 2 hours</div>
+    </div>
+  </section>
+
+  <!-- ============ USE CASES ============ -->
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Start with how you work</p>
+      <h2>Gear for your kind of productive</h2>
+    </div>
+    <div class="usecases">
+      {
+        useCases.map((u) => (
+          <a class="usecase" href={u.href}>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d={ICONS[u.icon]} />
+              </svg>
+            </span>
+            <h3>{u.title}</h3>
+            <p>{u.text}</p>
+            <span class="arrow">See picks →</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps. No 50-tab comparisons.</h2>
+    </div>
+    <ol class="steps">
+      {
+        steps.map((s, i) => (
+          <li>
+            <span class="step-num">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Browse by category</p>
+      <h2>Gadgets and everyday tech accessories</h2>
+    </div>
+    {
+      (['Gadgets', 'Accessories'] as const).map((group) => (
+        <div class="cat-group">
+          <h3>{group}</h3>
+          <div class="cats">
+            {CATEGORIES.filter((c) => c.group === group).map((c) => (
+              <a class="cat" href={`/find/?category=${c.id}`}>
+                <span>{c.label}</span>
+                <small>{countFor(c.id)} picks</small>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </section>
+
+  <!-- ============ GUIDES ============ -->
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Buying guides</p>
+      <h2>Know what matters before you buy</h2>
+    </div>
+    <div class="guides">
+      {
+        GUIDES.map((g) => (
+          <a class="guide" href={g.href}>
+            <small>{g.tag}</small>
+            <h3>{g.title}</h3>
+            <p>{g.blurb}</p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- ============ FINAL CALL TO ACTION ============ -->
+  <section class="cta-band">
+    <h2>Less scrolling. <mark>More doing.</mark></h2>
+    <p>Your next productive day starts with the right gear.</p>
+    <a class="btn btn-light" href="/find/">Find my gear →</a>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Scoped styles: these only affect this page. */
+
+  /* Extra colors for the illustration (light, then dark mode). */
+  .hero-art {
+    --ink: #24262b;
+    --ink-2: #3a3d44;
+    --screen: #fffdf8;
+    --line: #e2ddd0;
+    --desk: #d8c7a6;
+    --mug: #2f6b4f;
+    --pot: #c8714c;
+    --leaf: #4f8a68;
+  }
+  @media (prefers-color-scheme: dark) {
+    .hero-art {
+      --ink: #3a3f3b;
+      --ink-2: #4b514c;
+      --screen: #232724;
+      --line: #3a3f3b;
+      --desk: #4a4133;
+      --mug: #84cfa6;
+      --pot: #a95c3e;
+      --leaf: #5fa57d;
+    }
+  }
+
+  /* ---------- Layout helpers ---------- */
+  .hero,
+  .section,
+  .cta-band {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .section { padding-top: 88px; }
+  .section-head { max-width: 620px; margin-bottom: 28px; }
+  .section-head h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 4px 0 0; line-height: 1.15; }
+  .eyebrow {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--accent); color: var(--card); box-shadow: 0 8px 20px -10px var(--accent); }
+  .btn-ghost { color: var(--text); border: 1.5px solid var(--border); }
+  .btn-light { background: var(--highlight); color: #1c1d21; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 40px;
+    align-items: center;
+    padding-top: 56px;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin: 14px 0 18px;
+  }
+  .hero-lead { font-size: 1.15rem; color: var(--muted); max-width: 30em; margin: 0 0 28px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-meta { margin-top: 22px; font-size: 0.9rem; color: var(--muted); }
+
+  .hero-art { position: relative; padding-bottom: 104px; }
+  .hero-art svg { width: 100%; height: auto; display: block; }
+
+  .sun { fill: var(--accent-soft); }
+  .ink { fill: var(--ink); }
+  .ink-2 { fill: var(--ink-2); }
+  .screen { fill: var(--screen); }
+  .c-accent { fill: var(--accent); }
+  .c-hl { fill: var(--highlight); }
+  .c-mute { fill: var(--line); }
+  .empty { fill: none; stroke: var(--line); stroke-width: 2; }
+  .cursor { fill: var(--accent); animation: blink 1.1s steps(1) infinite; }
+  .note { fill: var(--highlight); }
+  .tick, .hand { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .clock { fill: var(--card); stroke: var(--ink); stroke-width: 4; }
+  .mug { fill: var(--mug); }
+  .mug-handle { fill: none; stroke: var(--mug); stroke-width: 6; }
+  .steam { fill: none; stroke: var(--muted); stroke-width: 3; stroke-linecap: round; opacity: 0.6; animation: steam 3s ease-in-out infinite; }
+  .s2 { animation-delay: 1.2s; }
+  .leaf { fill: var(--leaf); }
+  .pot { fill: var(--pot); }
+  .desk { fill: var(--desk); }
+
+  .float-card {
+    position: absolute;
+    left: 6%;
+    bottom: 0;
+    width: min(330px, 80%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px 16px;
+    box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.35);
+    animation: float 6s ease-in-out infinite;
+  }
+  .fc-top { display: flex; justify-content: space-between; gap: 8px; font-size: 0.75rem; font-weight: 700; }
+  .fc-label { color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .fc-score { color: var(--accent); }
+  .fc-product { display: flex; gap: 12px; align-items: center; margin: 8px 0 6px; }
+  .fc-name { font-weight: 700; margin: 0 0 2px; line-height: 1.3; }
+  .fc-price { margin: 0 0 6px; font-weight: 800; }
+  .fc-price span { font-weight: 500; color: var(--muted); font-size: 0.9rem; }
+  .float-card ul { margin: 0; padding: 0; list-style: none; font-size: 0.85rem; color: var(--muted); }
+  .float-card li::before { content: '✓ '; color: var(--accent); font-weight: 700; }
+
+  .float-pill {
+    position: absolute;
+    top: 6%;
+    right: 0;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 999px;
+    animation: float 6s ease-in-out infinite 3s;
+  }
+
+  /* ---------- Use cases ---------- */
+  .usecases { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .usecase {
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .usecase:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--accent-soft);
+  }
+  .icon svg { width: 24px; height: 24px; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .usecase h3 { font-size: 1.2rem; margin: 18px 0 6px; }
+  .usecase p { margin: 0 0 16px; color: var(--muted); font-size: 0.95rem; flex: 1; }
+  .arrow { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+
+  /* ---------- Steps ---------- */
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .steps li { border-top: 2px solid var(--text); padding-top: 18px; }
+  .step-num { font-family: var(--heading-font); font-size: 2.4rem; color: var(--accent); line-height: 1; }
+  .steps h3 { font-size: 1.25rem; margin: 12px 0 6px; }
+  .steps p { margin: 0; color: var(--muted); }
+
+  /* ---------- Categories ---------- */
+  .cat-group h3 {
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 10px;
+  }
+  .cat-group + .cat-group { margin-top: 24px; }
+  .cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .cat {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .cat:hover { border-color: var(--accent); color: var(--accent); }
+  .cat small { color: var(--muted); font-weight: 500; white-space: nowrap; }
+
+  /* ---------- Guides ---------- */
+  .guides { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .guide {
+    padding: 24px;
+    border-radius: 18px;
+    background: var(--accent-soft);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  .guide:hover { transform: translateY(-4px); }
+  .guide small { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; }
+  .guide h3 { font-size: 1.35rem; margin: 6px 0 8px; line-height: 1.2; }
+  .guide p { margin: 0; color: var(--muted); }
+
+  /* ---------- Final CTA ---------- */
+  .cta-band {
+    margin-top: 96px;
+    margin-bottom: 56px;
+    padding: 64px 24px;
+    border-radius: 28px;
+    background: var(--text);
+    color: var(--bg);
+    text-align: center;
+    max-width: 1088px;
+  }
+  .cta-band h2 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 10px; }
+  .cta-band mark { color: #1c1d21; background: #f6d86b; padding: 0 0.15em; border-radius: 6px; }
+  .cta-band p { margin: 0 0 26px; opacity: 0.8; font-size: 1.1rem; }
+
+  /* ---------- Animations ---------- */
+  @keyframes float { 50% { transform: translateY(-8px); } }
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes steam {
+    0%, 100% { opacity: 0; transform: translateY(4px); }
+    50% { opacity: 0.6; transform: translateY(-4px); }
+  }
+  /* Respect people who turned off animations in their phone/computer settings. */
+  @media (prefers-reduced-motion: reduce) {
+    .float-card, .float-pill, .cursor, .steam { animation: none; }
+    .btn, .usecase, .guide { transition: none; }
+  }
+
+  /* ---------- Tablets and phones ---------- */
+  @media (max-width: 1000px) {
+    .hero { grid-template-columns: 1fr; padding-top: 36px; }
+    .hero-art { max-width: 600px; width: 100%; margin: 0 auto; }
+  }
+  @media (max-width: 900px) {
+    .usecases { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: 1fr; gap: 24px; }
+  }
+  @media (max-width: 520px) {
+    .usecases { grid-template-columns: 1fr; }
+    .section { padding-top: 64px; }
+    .hero-art { padding-bottom: 0; }
+    .float-card { position: relative; width: auto; margin: -24px 12px 0; }
+    .float-pill { font-size: 0.7rem; padding: 6px 10px; }
+    .cta-band { margin: 64px 16px 40px; padding: 48px 20px; }
+  }
+</style>

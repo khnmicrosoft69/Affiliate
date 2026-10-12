@@ -1,0 +1,104 @@
+[
+  {
+    "id": "ph-sandisk-ultra-flair-64",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – SanDisk Ultra Flair USB 3.0 Flash Drive 64GB",
+    "price": 399,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A cheap, sturdy flash drive for school files.",
+    "pros": [
+      "Metal casing",
+      "Very cheap"
+    ],
+    "cons": [
+      "USB-A only",
+      "Not fast for big files"
+    ],
+    "specs": {
+      "brand": "SanDisk",
+      "color": [
+        "Silver"
+      ],
+      "type": "Flash drive",
+      "capacityGB": 64,
+      "readMBs": 150,
+      "connector": [
+        "USB-A"
+      ],
+      "rugged": false,
+      "weightG": 10
+    }
+  },
+  {
+    "id": "ph-sandisk-dual-drive-128",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – SanDisk Ultra Dual Drive USB-C 128GB",
+    "price": 799,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Works with both USB-C and USB-A, so it moves files between a phone, a new laptop and school PCs.",
+    "pros": [
+      "USB-C and USB-A",
+      "128GB"
+    ],
+    "cons": [
+      "Small and easy to lose"
+    ],
+    "specs": {
+      "brand": "SanDisk",
+      "color": [
+        "Grey"
+      ],
+      "type": "Flash drive",
+      "capacityGB": 128,
+      "readMBs": 150,
+      "connector": [
+        "USB-A",
+        "USB-C"
+      ],
+      "rugged": false,
+      "weightG": 6
+    }
+  },
+  {
+    "id": "ph-wd-elements-2tb",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – WD Elements Portable HDD 2TB",
+    "price": 4290,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/wd-elements-2tb.jpg",
+    "imageCredit": {
+      "author": "FASTILY",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2TB_WD_Elements_Portable_1_2016-07-03.jpg"
+    },
+    "review": "Lots of space for backups at a low price per GB.",
+    "pros": [
+      "2TB for backups",
+      "Good price per GB"
+    ],
+    "cons": [
+      "Slow compared to SSDs",
+      "Can break if dropped"
+    ],
+    "specs": {
+      "brand": "Western Digital",
+      "color": [
+        "Black"
+      ],
+      "type": "Portable HDD",
+      "capacityGB": 2000,
+      "readMBs": 120,
+      "connector": [
+        "USB-A"
+      ],
+      "rugged": false,
+      "weightG": 230
+    }
+  }
+]

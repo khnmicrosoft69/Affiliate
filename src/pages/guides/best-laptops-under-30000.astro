@@ -1,0 +1,61 @@
+---
+// Guide page. Address: /guides/best-laptops-under-30000/
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ResultCard from '../../components/ResultCard';
+import { findMatches } from '../../lib/match';
+import { getAllProducts } from '../../lib/products';
+import { SITE_NAME } from '../../lib/site';
+
+const BUDGET = 30000;
+const products = await getAllProducts();
+
+// Must: 8GB+ RAM and an SSD. Everything else ranks by overall specs.
+const picks = findMatches(products, {
+  country: 'PH',
+  category: 'laptop',
+  budget: BUDGET,
+  reqs: {
+    ramGB: { importance: 'must', min: 8 },
+    storageType: { importance: 'must', anyOf: ['SSD'] },
+  },
+}).slice(0, 5);
+---
+
+<BaseLayout
+  title={`Best Laptops Under ₱30,000 (2026) | ${SITE_NAME}`}
+  description="The best laptops under ₱30,000 for students, ranked by RAM, SSD, battery, and weight, with tips to avoid bad deals."
+>
+  <article class="guide">
+    <h1>Best Laptops Under ₱30,000</h1>
+    <p class="lead">
+      ₱30,000 is enough for a solid student laptop if you know what to look for. These picks all have
+      at least 8GB RAM and an SSD.
+    </p>
+
+    <h2>Top picks under ₱30,000</h2>
+    {picks.length === 0 && <p>No laptops under ₱30,000 in our list yet. Check back soon.</p>}
+    {picks.map((m, i) => <ResultCard match={m} rank={i + 1} showScore={false} />)}
+
+    <h2>Tips for buying a budget laptop</h2>
+    <ul>
+      <li>
+        <strong>Avoid 4GB RAM.</strong> It feels slow even for browsing in 2026. Aim for 8GB or more.
+      </li>
+      <li>
+        <strong>Avoid eMMC storage.</strong> It's much slower than an SSD. Look for "SSD" or "NVMe" in the
+        listing.
+      </li>
+      <li>
+        <strong>Buy from official stores</strong> (Shopee Mall / LazMall) for a real warranty.
+      </li>
+      <li>
+        <strong>Wait for sale days</strong> like 10.10, 11.11 and 12.12. Prices often drop a lot.
+      </li>
+    </ul>
+
+    <div class="cta card">
+      <p><strong>Want to rank these for coding, gaming, or battery?</strong></p>
+      <a class="button" href={`/find/?category=laptop&budget=${BUDGET}`}>Open the laptop finder →</a>
+    </div>
+  </article>
+</BaseLayout>

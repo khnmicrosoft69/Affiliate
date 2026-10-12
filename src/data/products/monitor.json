@@ -1,0 +1,113 @@
+[
+  {
+    "id": "ph-xiaomi-g24i",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Xiaomi Gaming Monitor G24i",
+    "price": 5999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Great value for gaming: a fast 180Hz IPS screen for under ₱6,000.",
+    "pros": [
+      "180Hz and 1ms response",
+      "IPS colors"
+    ],
+    "cons": [
+      "Stand only tilts",
+      "No speakers"
+    ],
+    "specs": {
+      "brand": "Xiaomi",
+      "color": [
+        "Black"
+      ],
+      "screenInches": 23.8,
+      "resolution": "1920×1080",
+      "refreshHz": 180,
+      "responseMs": 1,
+      "panel": "IPS",
+      "curved": false,
+      "adjustableStand": false,
+      "vesa": true,
+      "ports": [
+        "HDMI",
+        "DisplayPort"
+      ],
+      "speakers": false
+    }
+  },
+  {
+    "id": "ph-dell-s2725ds",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Dell 27 Monitor S2725DS",
+    "price": 14990,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A sharp 27-inch 1440p screen that's great for coding and design, with an adjustable stand.",
+    "pros": [
+      "Sharp 2560×1440 resolution",
+      "Height-adjustable stand"
+    ],
+    "cons": [
+      "Only 100Hz for gaming",
+      "Costs much more than 1080p monitors"
+    ],
+    "specs": {
+      "brand": "Dell",
+      "color": [
+        "Ash White"
+      ],
+      "screenInches": 27,
+      "resolution": "2560×1440",
+      "refreshHz": 100,
+      "responseMs": 4,
+      "panel": "IPS",
+      "curved": false,
+      "adjustableStand": true,
+      "vesa": true,
+      "ports": [
+        "HDMI",
+        "DisplayPort"
+      ],
+      "speakers": true
+    }
+  },
+  {
+    "id": "ph-nvision-n24",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – nVision N24 75Hz",
+    "price": 3899,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A cheap second screen for school work.",
+    "pros": [
+      "Very affordable",
+      "Has VGA for older PCs"
+    ],
+    "cons": [
+      "Only 75Hz",
+      "VA panel colors are less accurate"
+    ],
+    "specs": {
+      "brand": "nVision",
+      "color": [
+        "Black"
+      ],
+      "screenInches": 24,
+      "resolution": "1920×1080",
+      "refreshHz": 75,
+      "responseMs": 5,
+      "panel": "VA",
+      "curved": false,
+      "adjustableStand": false,
+      "vesa": true,
+      "ports": [
+        "HDMI",
+        "VGA"
+      ],
+      "speakers": false
+    }
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ph-logitech-g304",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Logitech G304 Lightspeed",
+    "price": 1695,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A reliable wireless gaming mouse that lasts months on one AA battery.",
+    "pros": [
+      "Lag-free 2.4GHz wireless",
+      "Long battery life"
+    ],
+    "cons": [
+      "Uses AA batteries",
+      "No Bluetooth"
+    ],
+    "specs": {
+      "brand": "Logitech",
+      "color": [
+        "Black",
+        "White",
+        "Lilac"
+      ],
+      "formFactor": "Ambidextrous",
+      "connection": [
+        "2.4GHz wireless"
+      ],
+      "dpi": 12000,
+      "weightG": 99,
+      "buttons": 6,
+      "rechargeable": false,
+      "silentClicks": false
+    }
+  },
+  {
+    "id": "ph-attack-shark-x11",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Attack Shark X11",
+    "price": 999,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Very light with lots of features for the price.",
+    "pros": [
+      "Light at 59 g",
+      "3 connection modes"
+    ],
+    "cons": [
+      "Lesser-known brand",
+      "Software is basic"
+    ],
+    "specs": {
+      "brand": "Attack Shark",
+      "color": [
+        "Black",
+        "White"
+      ],
+      "formFactor": "Ambidextrous",
+      "connection": [
+        "Wired",
+        "Bluetooth",
+        "2.4GHz wireless"
+      ],
+      "dpi": 22000,
+      "weightG": 59,
+      "buttons": 6,
+      "rechargeable": true,
+      "silentClicks": false
+    }
+  },
+  {
+    "id": "ph-logitech-m240",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Logitech M240 Silent",
+    "price": 995,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "image": "/images/products/logitech-m240.jpg",
+    "imageCredit": {
+      "author": "TaurusEmerald",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Logitech_M240_Silent_Bluetooth_Mouse.jpg"
+    },
+    "review": "A quiet everyday mouse, great for libraries and shared rooms.",
+    "pros": [
+      "Silent clicks",
+      "Bluetooth"
+    ],
+    "cons": [
+      "Only 3 buttons",
+      "Not for gaming"
+    ],
+    "specs": {
+      "brand": "Logitech",
+      "color": [
+        "Graphite",
+        "Rose",
+        "Off-white"
+      ],
+      "formFactor": "Ambidextrous",
+      "connection": [
+        "Bluetooth"
+      ],
+      "dpi": 4000,
+      "weightG": 75,
+      "buttons": 3,
+      "rechargeable": false,
+      "silentClicks": true
+    }
+  }
+]

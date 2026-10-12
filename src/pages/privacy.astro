@@ -1,0 +1,51 @@
+---
+// Privacy policy. Address: /privacy/
+// Google Analytics' terms require you to have one. Keep it honest and update it
+// whenever you add a new tool that collects data.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CONTACT_EMAIL, SITE_NAME } from '../lib/site';
+---
+
+<BaseLayout
+  title={`Privacy Policy | ${SITE_NAME}`}
+  description={`How ${SITE_NAME} uses analytics and affiliate links, and what information is and isn't collected.`}
+>
+  <article class="guide">
+    <h1>Privacy policy</h1>
+    <p class="lead">Last updated: October 12, 2026</p>
+
+    <h2>What we collect</h2>
+    <ul>
+      <li>
+        <strong>No accounts, no names, no emails.</strong> You can use the whole site without signing up.
+      </li>
+      <li>
+        <strong>Anonymous usage statistics</strong> through Google Analytics: which pages are visited, the
+        approximate country and city a visit comes from, device type, and finder actions (for example
+        "chose Laptops", "changed country", "requested a new country"). We use this to decide which
+        products and countries to add next.
+      </li>
+      <li>
+        <strong>Your chosen country</strong> is remembered in your own browser (local storage) so you don't
+        have to pick it again. It never leaves your device.
+      </li>
+    </ul>
+
+    <h2>Cookies</h2>
+    <p>
+      Google Analytics uses cookies to count visits. You can block or delete cookies in your browser
+      settings, or install Google's
+      <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Analytics opt-out add-on</a>.
+    </p>
+
+    <h2>Affiliate links</h2>
+    <p>
+      When you click a store link (Shopee, Lazada), you leave our site. The store and its
+      affiliate network may use cookies to know the visit came from us, so we can earn a small commission at
+      no extra cost to you. Their own privacy policies apply on their sites.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Email us at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+  </article>
+</BaseLayout>

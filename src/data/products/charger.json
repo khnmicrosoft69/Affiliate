@@ -1,0 +1,99 @@
+[
+  {
+    "id": "ph-apple-20w",
+    "country": "PH",
+    "store": "Lazada",
+    "name": "SAMPLE – Apple 20W USB-C Power Adapter",
+    "price": 1190,
+    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "Apple's official fast charger for iPhones and iPads.",
+    "pros": [
+      "Official and reliable"
+    ],
+    "cons": [
+      "Only one port",
+      "No cable included"
+    ],
+    "specs": {
+      "brand": "Apple",
+      "color": [
+        "White"
+      ],
+      "outputW": 20,
+      "portCount": 1,
+      "ports": [
+        "USB-C"
+      ],
+      "gan": false,
+      "foldablePlug": false,
+      "cableIncluded": false
+    }
+  },
+  {
+    "id": "ph-ugreen-nexode-65w",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – UGREEN Nexode 65W GaN Charger (3 ports)",
+    "price": 1899,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "One small charger for your laptop, phone and earbuds at the same time.",
+    "pros": [
+      "65W charges most laptops",
+      "3 ports, foldable plug"
+    ],
+    "cons": [
+      "No cable included"
+    ],
+    "specs": {
+      "brand": "UGREEN",
+      "color": [
+        "Grey",
+        "White"
+      ],
+      "outputW": 65,
+      "portCount": 3,
+      "ports": [
+        "USB-C",
+        "USB-A"
+      ],
+      "gan": true,
+      "foldablePlug": true,
+      "cableIncluded": false
+    }
+  },
+  {
+    "id": "ph-baseus-gan5-30w",
+    "country": "PH",
+    "store": "Shopee",
+    "name": "SAMPLE – Baseus GaN5 30W Mini Charger",
+    "price": 599,
+    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "lastChecked": "2026-10-12",
+    "review": "A tiny charger that fast-charges phones and comes with a cable.",
+    "pros": [
+      "Very small",
+      "Cable included"
+    ],
+    "cons": [
+      "Only one port",
+      "Not enough for most laptops"
+    ],
+    "specs": {
+      "brand": "Baseus",
+      "color": [
+        "Black",
+        "White"
+      ],
+      "outputW": 30,
+      "portCount": 1,
+      "ports": [
+        "USB-C"
+      ],
+      "gan": true,
+      "foldablePlug": false,
+      "cableIncluded": true
+    }
+  }
+]

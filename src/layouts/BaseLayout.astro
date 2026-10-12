@@ -1,0 +1,82 @@
+---
+// The shared "frame" for every page: <head> with SEO tags, header, footer.
+// Each page passes in its own title and description.
+import '@fontsource-variable/fraunces/wght.css'; // heading font, served from our own site
+import '../styles/global.css';
+import { SITE_NAME } from '../lib/site';
+
+interface Props {
+  title: string; // shown in the browser tab and as the blue link in Google
+  description: string; // the grey text under the link in Google (~150 characters)
+  wide?: boolean; // true = let the page use the full width (the landing page does)
+}
+
+const { title, description, wide = false } = Astro.props;
+
+// Your Google Analytics 4 "Measurement ID" (looks like G-ABC123XYZ).
+// It comes from the PUBLIC_GA_ID setting (see README, section 8). If it's empty, no tracking code loads.
+const GA_ID = import.meta.env.PUBLIC_GA_ID;
+// canonical = "the official address of this page", helps Google avoid duplicates.
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- How the page looks when shared on Facebook / Messenger -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+
+    {
+      GA_ID && (
+        <>
+          <!-- Google Analytics 4: counts visits and shows which country visitors are from -->
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+          <script is:inline define:vars={{ GA_ID }}>
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () {
+              window.dataLayer.push(arguments);
+            };
+            window.gtag('js', new Date());
+            window.gtag('config', GA_ID);
+          </script>
+        </>
+      )
+    }
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/"><span class="logo-dot" aria-hidden="true"></span>{SITE_NAME}</a>
+      <nav>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a class="nav-cta" href="/find/">Find gear</a>
+      </nav>
+    </header>
+
+    <main class={wide ? undefined : 'container'}>
+      <slot />
+      <!-- <slot /> = "put the page's own content here" -->
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <strong>Disclosure:</strong> Some links are affiliate links. If you buy through them, we may
+        earn a small commission at no extra cost to you. Prices change often, so always check the store page before buying.
+      </p>
+      <p class="footer-links">
+        <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/guides/">Guides</a>
+      </p>
+    </footer>
+  </body>
+</html>
