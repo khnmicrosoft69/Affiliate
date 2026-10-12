@@ -136,6 +136,19 @@ mouse → ph-logitech-m240 data does not match collection schema.
 
 ## 5. Real links: when and how (no scraping)
 
+### Updating links and prices with the spreadsheet
+Every product currently links to a **store search page** (e.g. Shopee search for "Acer Aspire Lite 14"). Its button says **"Find on Shopee →"** and the price is marked as approximate.
+To switch products to exact listings:
+1. Open `scripts/product-links.csv` in Excel or Google Sheets.
+2. For each product you've found, fill in **Real product link**, **Real price (PHP)** and **Date checked** (you can skip any you haven't done yet).
+3. Save it as CSV with the same name, then run:
+   ```bash
+   python scripts/import_links.py
+   ```
+   Products with a real link get it, plus the real price and date; their button changes to **"Buy on …"**. The rest keep their search link.
+4. Push to GitHub, and Vercel updates the site.
+
+
 Affiliate programs **review your website before approving you**, so the order is:
 
 1. **Now:** replace the samples with real products and use **normal store links** (just copy the product page address). That's allowed; you just don't earn commission yet.

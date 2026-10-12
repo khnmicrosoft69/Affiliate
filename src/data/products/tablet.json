@@ -5,7 +5,7 @@
     "store": "Shopee",
     "name": "Xiaomi Redmi Pad 2",
     "price": 11999,
-    "link": "https://example.com/replace-with-your-shopee-affiliate-link",
+    "link": "https://shopee.ph/search?keyword=Xiaomi%20Redmi%20Pad%202",
     "lastChecked": "2026-10-12",
     "review": "A budget tablet with a big battery and smooth 90Hz screen, good for reading, videos and notes.",
     "pros": [
@@ -41,7 +41,7 @@
     "store": "Lazada",
     "name": "Apple iPad (11th gen)",
     "price": 25990,
-    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "link": "https://www.lazada.com.ph/catalog/?q=Apple+iPad+11th+gen",
     "lastChecked": "2026-10-12",
     "image": "/images/products/ipad-11.png",
     "imageCredit": {
@@ -85,7 +85,7 @@
     "store": "Lazada",
     "name": "Samsung Galaxy Tab A9+",
     "price": 13990,
-    "link": "https://example.com/replace-with-your-lazada-affiliate-link",
+    "link": "https://www.lazada.com.ph/catalog/?q=Samsung+Galaxy+Tab+A9%2B",
     "lastChecked": "2026-10-12",
     "image": "/images/products/galaxy-tab-a9plus.jpg",
     "imageCredit": {

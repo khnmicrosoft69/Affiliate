@@ -6,6 +6,12 @@ import type { Match } from '../lib/match';
 import PhotoCredit from './PhotoCredit';
 import ProductImage from './ProductImage';
 
+// Is this link a store SEARCH page (not one exact product page)?
+// e.g. shopee.ph/search?keyword=… or lazada.com.ph/catalog/?q=…
+function isSearchLink(link: string): boolean {
+  return /shopee\.ph\/search\?|lazada\.com\.ph\/catalog\/\?/.test(link);
+}
+
 interface Props {
   match: Match;
   rank: number; // 1 = best match
@@ -28,6 +34,9 @@ export default function ResultCard({ match, rank, showScore = true }: Props) {
     })
     .filter(Boolean)
     .join(' · ');
+
+  // Search links lead to a list of results, so the button says "Find" and the price is approximate.
+  const isSearch = isSearchLink(p.link);
 
   const colorDef = getSpec(category, 'color');
   const colors = p.specs.color;
@@ -95,10 +104,15 @@ export default function ResultCard({ match, rank, showScore = true }: Props) {
         data-country={p.country}
         data-price={p.price}
         data-rank={rank}
+        data-link-type={isSearch ? 'search' : 'product'}
       >
-        Buy on {p.store} →
+        {isSearch ? 'Find' : 'Buy'} on {p.store} →
       </a>
-      <p className="checked">Price checked {p.lastChecked}</p>
+      <p className="checked">
+        {isSearch
+          ? `Approximate price. Check ${p.store} for today's price.`
+          : `Price checked ${p.lastChecked}`}
+      </p>
       </div>
     </article>
   );

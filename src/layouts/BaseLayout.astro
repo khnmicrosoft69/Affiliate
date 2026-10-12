@@ -98,6 +98,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           price: Number(d.price ?? 0),
           rank: Number(d.rank ?? 0),
           page: window.location.pathname, // e.g. /find/ or a guide page
+          link_type: d.linkType ?? '', // 'product' (exact listing) or 'search' (store search page)
         });
       });
     </script>
