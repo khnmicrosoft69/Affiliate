@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/guides/best-laptops-for-cs-students-philippines",
+      "destination": "/guides/best-laptops-for-cs-students/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/best-laptops-for-cs-students-philippines/",
+      "destination": "/guides/best-laptops-for-cs-students/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/best-laptops-under-30000-philippines",
+      "destination": "/guides/best-laptops-under-30000/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/best-laptops-under-30000-philippines/",
+      "destination": "/guides/best-laptops-under-30000/",
+      "permanent": true
+    }
+  ]
+}

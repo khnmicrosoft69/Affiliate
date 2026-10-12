@@ -1,0 +1,37 @@
+---
+// "Page not found" page. Shown for any address that doesn't exist
+// (Vercel and Netlify both use the built 404.html automatically).
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { GUIDES } from '../lib/guides';
+import { SITE_NAME } from '../lib/site';
+---
+
+<BaseLayout
+  title={`Page not found | ${SITE_NAME}`}
+  description="This page doesn't exist. Use the finder to get matched with the right laptop, gadget or tech accessory."
+>
+  <article class="guide not-found">
+    <p class="code">404</p>
+    <h1>This page doesn't exist</h1>
+    <p class="lead">The link may be old or mistyped. Here's where you can go instead:</p>
+
+    <a class="button" href="/find/">Open the finder →</a>
+
+    <h2>Buying guides</h2>
+    <ul>
+      {GUIDES.map((g) => <li><a href={g.href}>{g.title}</a></li>)}
+    </ul>
+    <p><a href="/">Back to the home page</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .not-found .code {
+    font-family: var(--heading-font);
+    font-size: 4rem;
+    line-height: 1;
+    margin: 32px 0 0;
+    color: var(--accent);
+  }
+  .not-found .button { margin: 8px 0 8px; }
+</style>
