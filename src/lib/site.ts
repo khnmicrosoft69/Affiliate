@@ -7,4 +7,4 @@ export const SITE_NAME = 'SpecFinder';
 export const OWNER_NAME = 'SpecFinder team';
 
 // Contact email, shown on the Contact, About and Privacy pages.
-export const CONTACT_EMAIL = 'accfrzkhn23@gmail.com';
+export const CONTACT_EMAIL = 'finderspec2@gmail.com';
