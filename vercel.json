@@ -20,6 +20,11 @@
       "source": "/guides/best-laptops-under-30000-philippines/",
       "destination": "/guides/best-laptops-under-30000/",
       "permanent": true
+    },
+    {
+      "source": "/sitemap-index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
     }
   ]
 }

@@ -185,11 +185,11 @@ All buy links already use `rel="sponsored"`, which tells Google they're affiliat
 
 ## 7. Google Search Console + sitemap
 
-The **sitemap** (`/sitemap-index.xml`) is a list of all your pages for Google. It's **generated automatically** on every build by `@astrojs/sitemap`, so new pages are included without any extra work.
+The **sitemap** (`/sitemap.xml`) is a list of all your pages for Google. It's **generated automatically** on every build by `src/pages/sitemap.xml.ts`, which finds every page in `src/pages/`, so new pages are included without any extra work. `public/robots.txt` lets all search engines (Google included) read the site and points them to the sitemap.
 
 1. Go to search.google.com/search-console → **Add property** → choose **URL prefix** → enter your site address.
 2. Verify ownership with the **HTML tag** method: copy the `<meta name="google-site-verification" ...>` tag, paste it into `src/layouts/BaseLayout.astro` inside `<head>`, then push and click **Verify**.
-3. Left menu → **Sitemaps** → enter `sitemap-index.xml` → Submit.
+3. Left menu → **Sitemaps** → enter `sitemap.xml` → Submit.
 4. Use **URL Inspection** on your home page and guides → "Request indexing".
 5. Expect a few days to weeks before pages show up. Check **Performance** to see which searches bring visitors.
 

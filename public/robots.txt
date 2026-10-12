@@ -1,6 +1,6 @@
-# Tells search engines they may read every page,
+# Tells search engines (Google included) they may read every page,
 # and where to find the list of all pages (the sitemap).
 User-agent: *
 Allow: /
 
-Sitemap: https://specfinder-roan.vercel.app/sitemap-index.xml
+Sitemap: https://specfinder-roan.vercel.app/sitemap.xml

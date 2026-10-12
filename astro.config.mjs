@@ -1,7 +1,6 @@
 // Astro settings for the whole project.
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   // Your live address. Used for canonical/og:url tags, the sitemap and robots.txt.
@@ -9,6 +8,6 @@ export default defineConfig({
   site: 'https://specfinder-roan.vercel.app',
 
   // react(): lets us use React components (.tsx) inside Astro pages.
-  // sitemap(): creates sitemap-index.xml automatically on every build.
-  integrations: [react(), sitemap()],
+  // (The sitemap is made by src/pages/sitemap.xml.ts.)
+  integrations: [react()],
 });
