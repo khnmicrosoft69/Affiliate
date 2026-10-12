@@ -192,7 +192,7 @@ The **sitemap** (`/sitemap-index.xml`) is a list of all your pages for Google. I
 | `country_selected` | they switch country | `country` |
 | `country_request` | they use "My country isn't listed…" | `requested_country`, e.g. `SG`. **This is your expansion wish list.** |
 | `category_selected` | they pick a category | `country`, `category` |
-| `store_click` | they click "View on …" | `country`, `store`, `category`, `product`, `rank` |
+| `buy_click` | they click a **Buy** button (finder **and** guide pages) | `product_name`, `store`, `product_id`, `category`, `price`, `rank`, `page` |
 
 **How the finder picks a country:** a `?country=PH` link first, then the country they chose last time, then a **guess from the device's time zone** (e.g. `Asia/Manila` → Philippines). The guess needs no internet request and no personal data.
 
@@ -203,6 +203,7 @@ The **sitemap** (`/sitemap-index.xml`) is a list of all your pages for Google. I
    **On your computer (optional):** copy `.env.example` to a new file called `.env` and fill in the ID.
 4. **See countries:** Reports → User attributes → **Demographic details** → Country.
 5. **See country requests:** Admin → **Custom definitions** → Create custom dimension → name `Requested country`, scope *Event*, parameter `requested_country`. (Do the same for `country_source`, `category` and `store` if you like.) Then Reports → Engagement → **Events** → `country_request`. Custom dimensions only collect data from the moment you create them, so set them up early.
+6. **See which products and stores get Buy clicks:** create custom dimensions for `product_name` and `store` (scope *Event*) the same way. Then Explore → Free form → rows: `Product name`, columns: `Store`, values: Event count, filtered to event name = `buy_click`.
 
 If `PUBLIC_GA_ID` is empty, no tracking code is added to the site. During `npm run dev`, events are printed in the browser console (`[track] ...`) so you can check them.
 

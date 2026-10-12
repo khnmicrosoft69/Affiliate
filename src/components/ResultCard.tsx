@@ -3,7 +3,6 @@
 import { formatPrice, getCountry } from '../lib/countries';
 import { formatSpec, getCategory, getSpec } from '../lib/categories';
 import type { Match } from '../lib/match';
-import { track } from '../lib/analytics';
 import PhotoCredit from './PhotoCredit';
 import ProductImage from './ProductImage';
 
@@ -80,17 +79,22 @@ export default function ResultCard({ match, rank, showScore = true }: Props) {
         </ul>
       )}
 
-      {/* rel="sponsored": tells Google this is an affiliate link (required by Google's rules).
-          target="_blank": opens the store in a new tab so the user keeps their results. */}
+      {/* rel="sponsored nofollow": tells Google this is an affiliate link (required by Google's rules).
+          rel="noopener": the store's tab can't control this page (safety).
+          target="_blank": opens the store in a new tab so the user keeps their results.
+          data-…: details read by the click tracker in BaseLayout.astro (works on every page). */}
       <a
         className="buy"
         href={p.link}
         target="_blank"
         rel="sponsored nofollow noopener"
-        // Tell Google Analytics a visitor went to a store (useful to see what earns money).
-        onClick={() =>
-          track('store_click', { country: p.country, store: p.store, category: p.category, product: p.id, rank })
-        }
+        data-product-id={p.id}
+        data-product-name={p.name}
+        data-store={p.store}
+        data-category={p.category}
+        data-country={p.country}
+        data-price={p.price}
+        data-rank={rank}
       >
         Buy on {p.store} →
       </a>

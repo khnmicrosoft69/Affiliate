@@ -78,5 +78,28 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/guides/">Guides</a>
       </p>
     </footer>
+
+    <script>
+      // Buy button click tracking, for EVERY page (finder and guides).
+      // One listener on the whole page catches clicks on any <a class="buy">,
+      // reads the product details stored on the button, and sends a "buy_click" event to Google Analytics.
+      import { track } from '../lib/analytics';
+
+      document.addEventListener('click', (event) => {
+        const button = (event.target as Element | null)?.closest<HTMLAnchorElement>('a.buy');
+        if (!button) return; // the click wasn't on a Buy button
+        const d = button.dataset; // data-product-name="…" becomes d.productName
+        track('buy_click', {
+          product_name: d.productName ?? '',
+          product_id: d.productId ?? '',
+          store: d.store ?? '',
+          category: d.category ?? '',
+          country: d.country ?? '',
+          price: Number(d.price ?? 0),
+          rank: Number(d.rank ?? 0),
+          page: window.location.pathname, // e.g. /find/ or a guide page
+        });
+      });
+    </script>
   </body>
 </html>
